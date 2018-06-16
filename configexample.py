@@ -1,0 +1,3 @@
+token = 'PUT TOKEN HERE'
+
+# RENAME THIS FILE TO config.py OR IT WON'T WORK YOU RETARD!!!!!!!!
