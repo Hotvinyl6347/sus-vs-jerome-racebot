@@ -39,7 +39,7 @@ async def teamjerome(ctx):
         await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have switched to **Team Jerome!**" % ctx.message.author.id, color=0x3498db))
     else:
         if jerome in ctx.message.author.roles:
-            await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you're already in **Team Jerome.**" % ctx.message.author.id, color=0xbc0012))
+            await bot.send_message(ctx.mess age.channel, embed=discord.Embed(description="<@%s>, you're already in **Team Jerome.**" % ctx.message.author.id, color=0xbc0012))
         else:
             await bot.add_roles(ctx.message.author, jerome)
             await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have joined **Team Jerome!**" % ctx.message.author.id, color=0x3498db))
@@ -51,13 +51,13 @@ async def teamsus(ctx):
     if jerome in ctx.message.author.roles:
         await bot.remove_roles(ctx.message.author, jerome)
         await bot.add_roles(ctx.message.author, sus)
-        await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have switched to **Team Sus!**" % ctx.message.author.id, color=0xf1c40f))
+        await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have switched to **Team Sus!**" % ctx.message.author.id, color=0xe74c3c))
     else:
         if sus in ctx.message.author.roles:
             await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you're already in **Team Sus.**" % ctx.message.author.id, color=0xbc0012))
         else:
             await bot.add_roles(ctx.message.author, sus)
-            await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have joined **Team Sus!**" % ctx.message.author.id, color=0xf1c40f))
+            await bot.send_message(ctx.message.channel, embed=discord.Embed(description="<@%s>, you have joined **Team Sus!**" % ctx.message.author.id, color=0xe74c3c))
 
 @bot.command(pass_context=True)
 async def countdown(ctx):
