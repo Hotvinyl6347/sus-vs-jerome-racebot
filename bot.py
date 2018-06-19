@@ -30,6 +30,14 @@ async def on_ready():
     print(discord.__version__)
 
 @bot.command(pass_context=True)
+async def shutdown(ctx):
+    if ctx.message.author.id == '220383768966463489':
+        await bot.send_message(ctx.message.channel, 'Bye bye :wave:')
+        await bot.logout()
+    else:
+        await bot.send_message(channel, embed=discord.Embed(description="You have no permission to shut down the bot.", color=0xbc0012))
+
+@bot.command(pass_context=True)
 async def teamjerome(ctx):
     jerome = discord.utils.get(ctx.message.server.roles, name="Team Jerome")
     sus = discord.utils.get(ctx.message.server.roles, name="Team Sus")
@@ -67,18 +75,18 @@ async def countdown(ctx):
         d["minutes"], d["seconds"] = divmod(rem, 60)
         return fmt.format(**d)
 
-    timeleft = datetime.datetime(2018, 7, 7) + datetime.timedelta(hours=7) - datetime.datetime.utcnow()
+    timeleft = datetime.datetime(2018, 7, 8) + datetime.timedelta(hours=7) - datetime.datetime.utcnow()
     embed = discord.Embed(color=0x1abc9c)
-    embed.set_author(name="Time left until Sus33 vs Jerome SMG2 speedrun!")
-    embed.add_field(name="Countdown to July 7, 2018", value=(strfdelta(timeleft, "**{days}** days, **{hours}** hours, **{minutes}** minutes, and **{seconds}** seconds")))
+    embed.set_author(name="Time left until Sus333 vs Jerome SMG2 speedrun!")
+    embed.add_field(name="Countdown to July 8, 2018", value=(strfdelta(timeleft, "**{days}** days, **{hours}** hours, **{minutes}** minutes, and **{seconds}** seconds")))
     await bot.send_message(ctx.message.channel, embed=embed)
 
 @bot.command(pass_context=True)
 async def help(ctx):
-    helpmsg = discord.Embed(title="SMG2", icon_url="%s" % bot.user.avatar_url, description="Usage: `.<command>`", color=0x1abc9c)
+    helpmsg = discord.Embed(title="JEROME AND SUS RACE BOT", icon_url="%s" % bot.user.avatar_url, description="Usage: `.<command>`", color=0x1abc9c)
     helpmsg.add_field(name="Team Role Commands", value="`teamjerome` `teamsus`", inline=False)
     helpmsg.add_field(name="Useful Commands", value="`countdown`", inline=False)
-    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0")
+    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.1")
     await bot.send_message(ctx.message.channel, embed=helpmsg)
 
 bot.run(config.token)
