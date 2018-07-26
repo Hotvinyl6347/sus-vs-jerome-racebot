@@ -28,7 +28,7 @@ async def on_ready():
     print("Bot connected")
     print("Sus is a gay loser")
     print(discord.__version__)
-    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.2 sus will lose")
+    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.3 shut up sus")
 
 @bot.command(pass_context=True)
 async def shutdown(ctx):
@@ -84,10 +84,11 @@ async def countdown(ctx):
 
 @bot.command(pass_context=True)
 async def help(ctx):
-    helpmsg = discord.Embed(title="JEROME AND SUS RACE BOT", icon_url=bot.user.avatar_url, description="Usage: `.<command>`", color=0x1abc9c)
+    helpmsg = discord.Embed(description="Usage: `.<command>`", color=0x1abc9c)
+    helpmsg.set_author(name="JEROME AND SUS RACE BOT", icon_url=bot.user.avatar_url)
     helpmsg.add_field(name="Team Role Commands", value="`teamjerome` `teamsus`", inline=False)
     helpmsg.add_field(name="Useful Commands", value="`countdown`", inline=False)
-    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.2")
+    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.3")
     await bot.send_message(ctx.message.channel, embed=helpmsg)
 
 bot.run(config.token)
