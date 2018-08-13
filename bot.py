@@ -28,7 +28,7 @@ async def on_ready():
     print("Bot connected")
     print("Sus is a gay loser")
     print(discord.__version__)
-    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.4 Jerome will win.\n\nhttps://www.twitch.tv/actuallyimjerome\nhttps://www.twitch.tv/sus333")
+    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.4 rv2 Jerome will win.\n\n<https://www.twitch.tv/actuallyimjerome>\n<https://www.twitch.tv/sus333>")
 
 @bot.command(pass_context=True)
 async def shutdown(ctx):
@@ -84,11 +84,11 @@ async def countdown(ctx):
 
 @bot.command(pass_context=True)
 async def jerome(ctx):
-    await bot.send_message(ctx.message.channel, "https://www.twitch.tv/actuallyimjerome")
+    await bot.send_message(ctx.message.channel, "<https://www.twitch.tv/actuallyimjerome>")
 
 @bot.command(pass_context=True)
 async def sus(ctx):
-    await bot.send_message(ctx.message.channel, "https://www.twitch.tv/sus333")
+    await bot.send_message(ctx.message.channel, "<https://www.twitch.tv/sus333>")
 
 @bot.command(pass_context=True)
 async def help(ctx):
@@ -97,7 +97,7 @@ async def help(ctx):
     helpmsg.add_field(name="Team Role Commands", value="`teamjerome` `teamsus`", inline=False)
     helpmsg.add_field(name="Useful Commands", value="`countdown`", inline=False)
     helpmsg.add_field(name="Livestream Links", value="`jerome` `sus`")
-    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.3")
+    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.4 rv2")
     await bot.send_message(ctx.message.channel, embed=helpmsg)
 
 bot.run(config.token)
