@@ -28,7 +28,7 @@ async def on_ready():
     print("Bot connected")
     print("Sus is a gay loser")
     print(discord.__version__)
-    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.4 rv2 Jerome will win.\n\n<https://www.twitch.tv/actuallyimjerome>\n<https://www.twitch.tv/sus333>")
+    await bot.send_message(discord.Object('457633597764141076'), "I am online now, version 1.0.5 Jerome will WIN and Sus will LOSE.\n\n<http://www.multitwitch.tv/sus333/actuallyimjerome>")
 
 @bot.command(pass_context=True)
 async def shutdown(ctx):
@@ -79,7 +79,7 @@ async def countdown(ctx):
     timeleft = datetime.datetime(2018, 8, 13) + datetime.timedelta(hours=12, minutes=30) - datetime.datetime.utcnow()
     embed = discord.Embed(color=0x1abc9c)
     embed.set_author(name="Time left until Sus333 vs Jerome SMG2 speedrun!")
-    embed.add_field(name="Countdown to August 13, 2018", value=(strfdelta(timeleft, "**{days}** days, **{hours}** hours, **{minutes}** minutes, and **{seconds}** seconds")))
+    embed.add_field(name="Countdown to August 13, 2018", value="NOW!!!!!!!!!!!\n\n<http://www.multitwitch.tv/sus333/actuallyimjerome>")
     await bot.send_message(ctx.message.channel, embed=embed)
 
 @bot.command(pass_context=True)
@@ -97,7 +97,7 @@ async def help(ctx):
     helpmsg.add_field(name="Team Role Commands", value="`teamjerome` `teamsus`", inline=False)
     helpmsg.add_field(name="Useful Commands", value="`countdown`", inline=False)
     helpmsg.add_field(name="Livestream Links", value="`jerome` `sus`")
-    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.4 rv2")
+    helpmsg.set_footer(text="© 2018 Xeno | Version 1.0.5")
     await bot.send_message(ctx.message.channel, embed=helpmsg)
 
 bot.run(config.token)
